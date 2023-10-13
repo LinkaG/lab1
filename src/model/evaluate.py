@@ -5,13 +5,6 @@ import pandas as pd
 import json
 from ruamel.yaml import YAML
 import mlflow
-import os
-from dotenv import load_dotenv
-
-
-load_dotenv()
-tracking_uri = os.environ.get("TRACKING_URI")
-print(tracking_uri)
 
 
 @click.command()
@@ -28,9 +21,8 @@ def evaluate(input_path_data: str, input_path_label: str, model_path: str, outpu
     :param output_path: Path to metrics flie
     :return:
     """
-    mlflow.set_tracking_uri(tracking_uri)
 
-    mlflow.set_experiment("svm classifier2")
+    mlflow.set_experiment("svm classifier")
     mlflow.start_run(run_name ="test_svm")
 
     yaml = YAML(typ="safe")

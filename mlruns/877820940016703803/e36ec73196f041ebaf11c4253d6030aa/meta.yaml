@@ -1,0 +1,15 @@
+artifact_uri: file:///home/lina/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/lab1/mlruns/877820940016703803/e36ec73196f041ebaf11c4253d6030aa/artifacts
+end_time: 1697234362723
+entry_point_name: ''
+experiment_id: '877820940016703803'
+lifecycle_stage: active
+run_id: e36ec73196f041ebaf11c4253d6030aa
+run_name: train_svm
+run_uuid: e36ec73196f041ebaf11c4253d6030aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697234350705
+status: 3
+tags: []
+user_id: lina

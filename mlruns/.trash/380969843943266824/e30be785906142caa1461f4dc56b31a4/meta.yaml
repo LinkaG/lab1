@@ -1,8 +1,9 @@
 artifact_uri: file:///home/lina/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/lab1/mlruns/380969843943266824/e30be785906142caa1461f4dc56b31a4/artifacts
+deleted_time: 1697234282802
 end_time: 1697233714536
 entry_point_name: ''
 experiment_id: '380969843943266824'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: e30be785906142caa1461f4dc56b31a4
 run_name: test_svm
 run_uuid: e30be785906142caa1461f4dc56b31a4

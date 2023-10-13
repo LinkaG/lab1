@@ -1,6 +1,7 @@
 artifact_location: file:///home/lina/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/lab1/mlruns/380969843943266824
 creation_time: 1697233714402
 experiment_id: '380969843943266824'
-last_update_time: 1697233714402
-lifecycle_stage: active
+last_update_time: 1697234282802
+lifecycle_stage: deleted
 name: svm classifier2
+tags: {}

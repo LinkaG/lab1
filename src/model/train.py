@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 
 yaml = YAML(typ="safe")
 load_dotenv()
-tracking_uri = os.environ.get("TRACKING_URI")
 
 
 @click.command()
@@ -24,7 +23,6 @@ def train(input_path_data: str, input_path_label: str, output_path: str):
     :param output_path: Path to trained model
     :return:
     """
-    mlflow.set_tracking_uri(tracking_uri)
     mlflow.sklearn.autolog()
     mlflow.set_experiment("svm classifier")
     mlflow.start_run(run_name ="train_svm")
