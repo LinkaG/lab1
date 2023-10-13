@@ -1,4 +1,4 @@
 [core]
     remote = myremote
 ['remote "myremote"']
-    url = ssh://lina@datasrv/opt/datasets
+    url = ssh://lina@data-srv/opt/datasets
