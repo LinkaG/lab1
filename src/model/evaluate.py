@@ -19,6 +19,13 @@ tracking_uri = os.environ.get("TRACKING_URI")
 @click.argument("model_path", type=click.Path())
 @click.argument("output_path", type=click.Path())
 def evaluate(input_path_data: str, input_path_label: str, model_path: str, output_path: str):
+    """ Function to evaluate model
+    :param input_path_data: Path to test data
+    :param input_path_label: Path to test labels
+    :param model_path: Path to model file
+    :param output_path: Path to metrics file
+    :return:
+    """
     mlflow.set_tracking_uri(tracking_uri)
 
     mlflow.set_experiment("logreg classifier")

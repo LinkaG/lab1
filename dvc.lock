@@ -65,7 +65,7 @@ stages:
     outs:
     - path: models/logreg.pkl
       hash: md5
-      md5: 5facd1be7546a746f95e3ea6db5875d3
+      md5: d12309dbc6b39631802ee05ec57774f8
       size: 1415
   evaluate:
     cmd: python src/model/evaluate.py data/processed/test_data.csv data/processed/test_labels.csv
@@ -81,7 +81,7 @@ stages:
       size: 207
     - path: models/logreg.pkl
       hash: md5
-      md5: 5facd1be7546a746f95e3ea6db5875d3
+      md5: d12309dbc6b39631802ee05ec57774f8
       size: 1415
     - path: src/model/evaluate.py
       hash: md5

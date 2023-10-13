@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 
 yaml = YAML(typ="safe")
 load_dotenv()
-# tracking_uri = os.environ.get("TRACKING_URI")
 
 
 @click.command()
@@ -18,7 +17,12 @@ load_dotenv()
 @click.argument("input_path_label", type=click.Path())
 @click.argument("output_path", type=click.Path())
 def train(input_path_data: str, input_path_label: str, output_path: str):
-    # mlflow.set_tracking_uri(tracking_uri)
+    """Function to train model.
+    :param input_path_data:Path to train dataset
+    :param input_path_label: Path to train labels
+    :param output_path: Path to model file
+    :return:
+    """
     mlflow.sklearn.autolog()
     mlflow.set_experiment("logreg classifier")
     mlflow.start_run(run_name="train_logreg")
