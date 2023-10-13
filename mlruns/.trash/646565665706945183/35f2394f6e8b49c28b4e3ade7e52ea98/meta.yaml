@@ -1,0 +1,16 @@
+artifact_uri: file:///home/lina/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/lab1/mlruns/646565665706945183/35f2394f6e8b49c28b4e3ade7e52ea98/artifacts
+deleted_time: 1697233659670
+end_time: 1697233354145
+entry_point_name: ''
+experiment_id: '646565665706945183'
+lifecycle_stage: deleted
+run_id: 35f2394f6e8b49c28b4e3ade7e52ea98
+run_name: test_svm
+run_uuid: 35f2394f6e8b49c28b4e3ade7e52ea98
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1697233353987
+status: 3
+tags: []
+user_id: lina

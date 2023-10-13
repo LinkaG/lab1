@@ -1,0 +1,15 @@
+dataset:
+  output_folder: data/raw/iris.csv
+  train_data_folder: data/processed/train_data.csv
+  train_labels_folder: data/processed/train_labels.csv
+  test_data_folder: data/processed/test_data.csv
+  test_labels_folder: data/processed/test_labels.csv
+model:
+  params:
+    _target_: sklearn.svm.SVC
+    kernel: rbf
+    gamma: 0.1
+    C: 1.0
+  output_path: models/svm.pkl
+evaluate:
+  metrics: data/processed/metrics.json

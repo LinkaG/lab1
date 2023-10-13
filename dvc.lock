@@ -1,0 +1,95 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/data/load_data.py data/raw/iris.csv
+    deps:
+    - path: src/data/load_data.py
+      hash: md5
+      md5: 54e57ec4eb9c0192b1d311565dc04f06
+      size: 604
+    outs:
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: 53cd1fa405827a87fe3b5768e0a88ade
+      size: 3077
+  split_data:
+    cmd: python src/data/split_data.py data/raw/iris.csv data/processed/train_data.csv
+      data/processed/train_labels.csv data/processed/test_data.csv data/processed/test_labels.csv
+    deps:
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: 53cd1fa405827a87fe3b5768e0a88ade
+      size: 3077
+    - path: src/data/split_data.py
+      hash: md5
+      md5: 885d3cfb19ea8fd68e1d0bc7ade72fc4
+      size: 1470
+    outs:
+    - path: data/processed/test_data.csv
+      hash: md5
+      md5: ec8cc2a05942eadc8bb17b2e0a0e69d8
+      size: 870
+    - path: data/processed/test_labels.csv
+      hash: md5
+      md5: a14b578b5699abc569206b6e18237fa8
+      size: 207
+    - path: data/processed/train_data.csv
+      hash: md5
+      md5: 84126e8c7beddacaf277b8e64c9646f6
+      size: 1670
+    - path: data/processed/train_labels.csv
+      hash: md5
+      md5: bd3a452fc5458035f6ca8f52311ae47e
+      size: 407
+  train:
+    cmd: python src/model/train.py data/processed/train_data.csv data/processed/train_labels.csv  models/svm.pkl
+    deps:
+    - path: data/processed/train_data.csv
+      hash: md5
+      md5: 84126e8c7beddacaf277b8e64c9646f6
+      size: 1670
+    - path: data/processed/train_labels.csv
+      hash: md5
+      md5: bd3a452fc5458035f6ca8f52311ae47e
+      size: 407
+    - path: src/model/train.py
+      hash: md5
+      md5: 280299e4294eaeac7c9b59da98fc63e0
+      size: 1215
+    params:
+      params.yaml:
+        model.params:
+          _target_: sklearn.svm.SVC
+          kernel: rbf
+          gamma: 0.1
+          C: 1.0
+    outs:
+    - path: models/svm.pkl
+      hash: md5
+      md5: 115a7569d349202af8a468c72aada585
+      size: 4983
+  evaluate:
+    cmd: python src/model/evaluate.py data/processed/test_data.csv data/processed/test_labels.csv
+      models/svm.pkl data/processed/metrics.json
+    deps:
+    - path: data/processed/test_data.csv
+      hash: md5
+      md5: ec8cc2a05942eadc8bb17b2e0a0e69d8
+      size: 870
+    - path: data/processed/test_labels.csv
+      hash: md5
+      md5: a14b578b5699abc569206b6e18237fa8
+      size: 207
+    - path: models/svm.pkl
+      hash: md5
+      md5: 115a7569d349202af8a468c72aada585
+      size: 4983
+    - path: src/model/evaluate.py
+      hash: md5
+      md5: aadb87115e60bf12c484603bc044749e
+      size: 1546
+    outs:
+    - path: data/processed/metrics.json
+      hash: md5
+      md5: ce3618d86a47cfba7d4c112ac4a2d677
+      size: 23
