@@ -66,7 +66,7 @@ stages:
     outs:
     - path: models/svm.pkl
       hash: md5
-      md5: 25e98f0849ff425be6a6061fcb0016af
+      md5: 7efe00f824e60a142b58f57602f2b0da
       size: 4983
   evaluate:
     cmd: python src/model/evaluate.py data/processed/test_data.csv data/processed/test_labels.csv
@@ -82,7 +82,7 @@ stages:
       size: 207
     - path: models/svm.pkl
       hash: md5
-      md5: 25e98f0849ff425be6a6061fcb0016af
+      md5: 7efe00f824e60a142b58f57602f2b0da
       size: 4983
     - path: src/model/evaluate.py
       hash: md5
