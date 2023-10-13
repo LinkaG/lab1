@@ -1,9 +1,0 @@
-digest: 36b43e73
-name: dataset
-profile: '{"num_rows": 100, "num_elements": 400}'
-schema: '{"mlflow_colspec": [{"type": "double", "name": "sepal length (cm)"}, {"type":
-  "double", "name": "sepal width (cm)"}, {"type": "double", "name": "petal length
-  (cm)"}, {"type": "double", "name": "petal width (cm)"}]}'
-source: '{"tags": {"mlflow.user": "lina", "mlflow.source.name": "src/model/train.py",
-  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "a03e8ffe9b81b496821a60e4c9805300134ac5c0"}}'
-source_type: code
