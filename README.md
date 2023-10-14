@@ -30,7 +30,7 @@ python3 -m venv env
 ```
 и установить зависимости
 ```
-python3 -m pip install -r requrements
+python3 -m pip install -r requirements.txt
 ```
 3. Запустить mlflow с помощью команды 
 ```
